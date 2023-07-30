@@ -35,6 +35,13 @@ To run tests: `$ npm run test`
 
 # Known bugs:
 
+Issue with mercage.js, when tests are run, keep getting NaN for output. Ex. below:
+
+```bash
+Expected: "Oh you are originally from Mecury! True age is 1.2?!"
+Received: "Oh you are originally from Mecury! True age is NaN?!"
+```
+
 #### Copyright (c) 2023 Deante Cacatian
 
 - Permission is hereby granted, free of charge, to any person obtaining a copy
