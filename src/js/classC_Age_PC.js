@@ -1,0 +1,34 @@
+class Planet {
+  constructor(name, conversionFactor) {
+    this.name = name;
+    this.conversionFactor = conversionFactor;
+  }
+
+  calculateAge(earthAge) {
+    return (earthAge / this.conversionFactor).toFixed(2);
+  }
+}
+
+class AgeCalculator {
+  constructor() {
+    this.planets = [
+      new Planet("Mercury", 0.24),
+      new Planet("Venus", 0.62),
+      new Planet("Mars", 1.88),
+      new Planet("Jupiter", 11.86)
+    ];
+  }
+
+  calculatePlanetAges(earthAge) {
+    const planetAges = {};
+    this.planets.forEach(planet => {
+      planetAges[planet.name] = planet.calculateAge(earthAge);
+    });
+    return planetAges;
+  }
+}
+
+module.exports = {
+  Planet,
+  AgeCalculator
+};
