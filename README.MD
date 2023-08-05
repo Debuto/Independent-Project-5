@@ -41,7 +41,7 @@ To run tests: `$ npm run test`
 
 # Known bugs:
 
-None to report currently...
+Text Encoder issue durring current npm test... (Run test for more info...)
 
 #### Copyright (c) 2023 Deante Cacatian
 
