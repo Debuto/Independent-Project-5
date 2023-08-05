@@ -15,7 +15,24 @@ function calculatePlanetAge(earthAge) {
   return planetAges;
 }
 
+function main() {
+  const earthAge = parseFloat(prompt("Enter your age in Earth years:"));
+
+  if (isNaN(earthAge)) {
+    console.log("Invalid input. Please enter a valid number.");
+    return;
+  }
+
+  const planetAges = calculatePlanetAge(earthAge);
+
+  console.log(`Your age on different planets:`);
+  for (const planet in planetAges) {
+    console.log(`${planet}: ${planetAges[planet]} years`);
+  }
+}
+
 module.exports = {
   planetConversionFactors,
-  calculatePlanetAge
+  calculatePlanetAge,
+  main 
 };

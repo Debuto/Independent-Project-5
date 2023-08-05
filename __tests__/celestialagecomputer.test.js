@@ -1,4 +1,4 @@
-const { planetConversionFactors, calculatePlanetAge } = require('../src/js/celestialagecomputer.js');
+const { planetConversionFactors, calculatePlanetAge, main } = require('../src/js/celestialagecomputer.js');
 
 describe('calculatePlanetAge', () => {
   it('calculates age on different planets correctly', () => {
@@ -13,5 +13,39 @@ describe('calculatePlanetAge', () => {
     const planetAges = calculatePlanetAge(earthAge);
 
     expect(planetAges).toEqual(expectedPlanetAges);
+  });
+});
+
+global.prompt = () => '30';
+
+describe('main', () => {
+  let originalLog;
+
+  beforeEach(() => {
+    originalLog = console.log;
+    console.log = jest.fn();
+  });
+
+  afterEach(() => {
+    console.log = originalLog;
+  });
+
+  it('prints age on different planets correctly', () => {
+    main();
+
+    const expectedPlanetAges = calculatePlanetAge(30);
+
+    expect(console.log).toHaveBeenCalledWith(`Your age on different planets:`);
+    for (const planet in expectedPlanetAges) {
+      expect(console.log).toHaveBeenCalledWith(`${planet}: ${expectedPlanetAges[planet]} years`);
+    }
+  });
+
+  it('handles invalid input', () => {
+    global.prompt = () => 'invalid';
+
+    main();
+
+    expect(console.log).toHaveBeenCalledWith(`Invalid input. Please enter a valid number.`);
   });
 });
