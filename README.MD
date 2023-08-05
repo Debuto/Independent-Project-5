@@ -1,8 +1,8 @@
-# Project Name: 
+# Project Name: Celestial Age Calculator
 
 ### By: **Deante Cacatian**
 
-## To Clone this repository:
+## Setup/Install Instructions:
 
 * In order to run install and run project you'll need to have Node installed on your computer.
 1. Clone Project, in  Bash terminal: `$ git clone https://github.com/Debuto/Independent-Project-4.git`

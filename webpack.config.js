@@ -17,7 +17,7 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Pizza Order',
+      title: 'Celestial Age Calculator',
       template: './index.html',
       inject: 'body'
     })

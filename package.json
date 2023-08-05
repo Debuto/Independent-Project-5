@@ -1,5 +1,5 @@
 {
-  "name": "portfolio4-project",
+  "name": "portfolio5-project",
   "version": "1.0.0",
   "description": "1. Go to the main page\r 2. Click on the CODE button\r 3. Copy the URL to the repository\r 4. Open Git Bash (or whichever terminal is appropiate for your OS)\r 5. Change your directory to where you want to add the cloned remote repository (use the commannd cd ex. \\fie_path\\destination)\r 6. Type this in Git Bash: git clone https://github.com/Debuto/Independent-Project-2.git\r 7. Press ENTER output should look similiar to below:",
   "main": "index.js",
