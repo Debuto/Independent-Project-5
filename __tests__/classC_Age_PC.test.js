@@ -35,4 +35,18 @@ describe('Planet and AgeCalculator', () => {
       });
     });
   });
+
+  it('should display error message for invalid input', () => {
+      const ageCalculator = new AgeCalculator();
+
+      const promptMock = jest.spyOn(window, 'prompt');
+      promptMock.mockReturnValueOnce('invalid input');
+
+      ageCalculator.main();
+
+      const outputDiv = window.document.getElementById('output');
+      const displayedText = outputDiv.textContent;
+
+      expect(displayedText).toContain('Invalid input. Please enter a valid number.');
+    });
 });

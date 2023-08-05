@@ -26,7 +26,33 @@ class AgeCalculator {
     });
     return planetAges;
   }
+
+  displayOutput(outputText) {
+    const outputDiv = document.getElementById('output');
+    outputDiv.textContent = outputText;
+  }
+
+  main() {
+    const earthAge = parseFloat(prompt('Enter your age in Earth years:'));
+
+    if (isNaN(earthAge)) {
+      this.displayOutput('Invalid input. Please enter a valid number.');
+      return;
+    }
+
+    const planetAges = this.calculatePlanetAges(earthAge);
+
+    let outputText = 'Your age on different planets:\n';
+    for (const planet in planetAges) {
+      outputText += `${planet}: ${planetAges[planet]} years\n`;
+    }
+
+    this.displayOutput(outputText);
+  }
 }
+
+const ageCalculator = new AgeCalculator();
+ageCalculator.main();
 
 module.exports = {
   Planet,
