@@ -13,6 +13,8 @@
 
 ## Description:
 
+An application that determines a user's age based on a planet's solar years.
+
 <br>
 
 ---
@@ -25,6 +27,10 @@
 * CSS
 * Git Bash
 * Github
+* Jest
+* Npm
+* Babel
+* Eslint
 
 <br>
 
@@ -35,12 +41,7 @@ To run tests: `$ npm run test`
 
 # Known bugs:
 
-Issue with mercage.js, when tests are run, keep getting NaN for output. Ex. below:
-
-```bash
-Expected: "Oh you are originally from Mecury! True age is 1.2?!"
-Received: "Oh you are originally from Mecury! True age is NaN?!"
-```
+None to report currently...
 
 #### Copyright (c) 2023 Deante Cacatian
 
