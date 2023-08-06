@@ -43,6 +43,8 @@ To run tests: `$ npm run test`
 
 Text Encoder issue durring current npm test... (Run test for more info...)
 
+Issue with bbutton not being connected in html to js file...
+
 #### Copyright (c) 2023 Deante Cacatian
 
 - Permission is hereby granted, free of charge, to any person obtaining a copy
