@@ -7,6 +7,10 @@ class Planet {
   calculateAge(earthAge) {
     return (earthAge / this.conversionFactor).toFixed(2);
   }
+
+  calculateAgePast(earthAge, earthAgePast) {
+    return ((earthAge / this.conversionFactor) - (earthAgePast / this.conversionFactor)).toFixed(2);
+  }
 }
 
 class AgeCalculator {
@@ -30,7 +34,7 @@ class AgeCalculator {
   pastYears(presentAge, pastAge){
     const planetAges = {};
     this.planets.forEach(planet => {
-      planetAges[planet.name] = planet.calculateAge(earthAge);
+      planetAges[planet.name] = planet.calculateAgePast(earthAge);
     });
     return planetAges;
   }

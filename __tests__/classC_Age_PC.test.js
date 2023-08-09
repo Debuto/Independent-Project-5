@@ -30,6 +30,13 @@ describe('Planet', () => {
       expect(jupiter.calculateAge(100)).toBe('8.43');
     });
   });
+
+  describe('calculateAgePast', () => {
+    it('should correctly calculate the age difference for Mercury', () => {
+      const mercury = new Planet('Mercury', 0.24);
+      expect(mercury.calculateAgePast(100, 90)).toBe('41.67');
+    });
+  });
 });
 
 describe('AgeCalculator', () => {
