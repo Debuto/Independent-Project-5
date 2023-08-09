@@ -36,14 +36,13 @@ An application that determines a user's age based on a planet's solar years.
 
 # Tests:
 To run tests: `$ npm run test`
+Will show full coverage.
 
 ---
 
 # Known bugs:
 
-Text Encoder issue durring current npm test... (Run test for more info...)
-
-Issue with bbutton not being connected in html to js file...
+Project logic works as intended.
 
 #### Copyright (c) 2023 Deante Cacatian
 
