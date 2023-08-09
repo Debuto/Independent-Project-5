@@ -31,10 +31,10 @@ class AgeCalculator {
     return planetAges;
   }
 
-  pastYears(presentAge, pastAge){
+  pastYears(earthAge, earthAgePast){
     const planetAges = {};
     this.planets.forEach(planet => {
-      planetAges[planet.name] = planet.calculateAgePast(earthAge);
+      planetAges[planet.name] = planet.calculateAgePast(earthAge, earthAgePast)
     });
     return planetAges;
   }

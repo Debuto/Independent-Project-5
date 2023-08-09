@@ -65,10 +65,10 @@ describe('AgeCalculator', () => {
         const ageCalculator = new AgeCalculator();
         const planetAges = ageCalculator.pastYears(100, 90);
         expect(planetAges).toEqual({
-          Mercury: '41.66',
+          Mercury: '41.67',
           Venus: '16.13',
           Mars: '5.32',
-          Jupiter: '.84',
+          Jupiter: '0.84',
         });
       })
     })
