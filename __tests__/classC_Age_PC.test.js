@@ -37,6 +37,13 @@ describe('Planet', () => {
       expect(mercury.calculateAgePast(100, 90)).toBe('41.67');
     });
   });
+
+  describe('calculateAgeFuture', () => {
+    it('should correctly calculate the age addition for Mercury', () => {
+      const mercury = new Planet('Mercury', 0.24);
+      expect(mercury.calculateAgeFuture(100, 110)).toBe('41.67')
+    })
+  })
 });
 
 describe('AgeCalculator', () => {
