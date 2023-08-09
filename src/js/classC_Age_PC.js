@@ -46,7 +46,7 @@ class AgeCalculator {
   futureYears(earthAge, earthAgeFuture){
     const planetAges = {};
     this.planets.forEach(planet => {
-      planetAges[planet.name] = planet.calculateAgeFuture(earthAgeFuture, earthAge)
+      planetAges[planet.name] = planet.calculateAgeFuture(earthAge, earthAgeFuture);
     });
     return planetAges;
   }

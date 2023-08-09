@@ -77,8 +77,21 @@ describe('AgeCalculator', () => {
           Mars: '5.32',
           Jupiter: '0.84',
         });
-      })
-    })
+      });
+    });
+
+    describe('futureYears()', () => {
+      it("should return the difference in years between a future age and the present age for all planets", () => {
+        const ageCalculator = new AgeCalculator();
+        const planetAges = ageCalculator.futureYears(100, 110);
+        expect(planetAges).toEqual({
+          Mercury: '41.67',
+          Venus: '16.13',
+          Mars: '5.32',
+          Jupiter: '0.84',
+        });
+      });
+    });
   })
  
 });
